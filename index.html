@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hello, world!</title>
+<meta name="viewport" content="width=device-width, initial scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+
+<style> 
+</style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li>Reflections</li>
+                <li>Images</li>
+                <li>Extras</li>
+                <li> <input type="text" placeholder="SEARCH..."> <buttton class="search-btn">GO</buttton></li>
+            </ul>
+        </div>
+    </nav>
+<section class="header">
+<h1>Saylor's Journal</h1>
+<h3> A blog created for IXXN 221 - Web Design I</h3>
+
+</section> 
+<hr>
+<section class="content-container">
+    <div class="left-content">
+        <h2>My Most Recent Project</h2>
+        <br>
+        <div class="featured-article">
+            <video width="320" height="240" controls>
+                <source src="images/movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+              </video>
+            <br>
+            <br>
+            <br>
+            <p> This is a project i recently completed for MDDN 222- Virtual Reality studio. We were tasked with creating an environment 
+                that would fit within the context of VR. I thought that putting together a Pirate Captain's Quarters would make for an interesting environment.
+            </p>
+        </div>
+        <hr class="hr-mid">
+     
+             <div class="another-article">
+                 <br>
+                 <br>
+                <h2>Previous Project</h2>
+                <br>
+
+                <div class="slide-container">
+                    <div class="slide fade">
+                     <img src='images/slide/2.png' alt=''>
+                   </div>
+                   <div class="slide fade">
+                     <img src='images/slide/3.png' alt=''>
+                   </div>
+                   <div class="slide fade">
+                     <img src='images/slide/4.png' alt=''>
+                   </div>
+                   <div class="slide fade">
+                    <img src='images/slide/5.png' alt=''>
+                  </div>
+                  <div class="slide fade">
+                    <img src='images/slide/6.png' alt=''>
+                  </div>
+             
+                   <a class="prev" title="Previous">&#10094</a>
+                   <a  class="next" title="Next">&#10095</a>
+                 </div>
+
+                 <div class="dots-container">
+                   <span class="dot"></span>
+                   <span class="dot"></span>
+                   <span class="dot"></span>
+                   <span class="dot"></span>
+                   <span class="dot"></span>
+                 </div>
+
+                <br>
+                <p>This project was for design Psychology, we had to research Psychology papers that either supported 
+                    or was the foundation for a concept. We had to do this three times, producing three different concepts.
+                    We could develop either an app, a product or an experience, not limited to one of each, however I challenged
+                    myself by doing one of each.
+                </p>
+                <br>
+                <br>
+                <br>
+                <button class="blog-btn"> <a href="blog.html"><span>View Design Blog</span></a></button>
+            </div>
+    </div>
+
+
+
+
+    <div class="right-content">
+        <div class="avatar-content">
+            <h5>ABOUT ME</h5>
+            <img class="avatar" src="images/avatar.png" alt="">
+            <p class="author-caption"> My name is Sophia Taylor, I'm in my second year of a Bachelor of Design Innovation at Victoria University of Wellington.
+                I'm currently doing a double major in Interaction Design and Media Design. I am particularly interesting in Web & UX design, as well as 3D modelling and game development.
+            </p>
+        </div>
+
+
+        <div class="topics">
+            <H5>CURRENT CLASSES</H5>
+                <ul>
+                    <li>Web Design I</li>
+                    <li>Internet & Social Media Design</li>
+                    <li>Virtual Reality Studio</li>
+                    <li>Design Psychology</li>
+                </ul>
+        </div>
+        <div class="popular-posts">
+            <h5>MY MAJORS</h5>
+            <img src="images/img3.jpg" alt="">
+            <p class="caption">Interaction Design</p>
+            <BR>
+                <BR>
+            <img src="images/img4.png" alt="">
+            <p class="caption">Media Design</p>
+        </div>
+    </div>
+
+</section>
+<footer>
+    <p>&copy Sophia Taylor 2020</p>
+</footer>
+
+</body>
+
+</html>
+<script>
+var currentSlide = 0;
+const slides = document.querySelectorAll(".slide")
+const dots = document.querySelectorAll('.dot')
+
+const init = (n) => {
+  slides.forEach((slide) => {
+    slide.style.display = "none"
+    dots.forEach((dot) => {
+      dot.classList.remove("active")
+    })
+  })
+  slides[n].style.display = "block"
+  dots[n].classList.add("active")
+}
+document.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+const next = () => {
+  currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+  init(currentSlide)
+}
+
+const prev = () => {
+  currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+  init(currentSlide)
+}
+
+document.querySelector(".next").addEventListener('click', next)
+document.querySelector(".prev").addEventListener('click', prev)
+
+setInterval(() => {
+  next()
+}, 10000);
+
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    init(index)
+    currentSlide = i
+  })
+})
+</script>
