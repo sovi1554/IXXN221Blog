@@ -2,28 +2,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hello, world!</title>
+<title>Saylor's Journal</title>
 <meta name="viewport" content="width=device-width, initial scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style> 
 </style>
 </head>
 
 <body>
-    <nav>
-        <div class="nav-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li>Reflections</li>
-                <li>Images</li>
-                <li>Extras</li>
-                <li> <input type="text" placeholder="SEARCH..."> <buttton class="search-btn">GO</buttton></li>
-            </ul>
+
+        <div class="topnav" id="myTopnav">
+          <a href="index.html" class="active">HOME</a>
+          <a href="blog.html">BLOG</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-    </nav>
+
 <section class="header">
 <h1>Saylor's Journal</h1>
 <h3> A blog created for IXXN 221 - Web Design I</h3>
@@ -180,4 +178,13 @@ dots.forEach((dot, index) => {
     currentSlide = i
   })
 })
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 </script>
