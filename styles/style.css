@@ -6,9 +6,13 @@
 
 body{
     font-family: 'Raleway', sans-serif;
-    background-color: #f1f1f1;
+    background-color: #ebebeb;
 }
 
+p{
+  line-height: 180%;
+  letter-spacing: 0.5px;;
+}
 /*~~~~~~~~~~~ Nav Bar ~~~~~~~~~~~~~*/
 
 .topnav {
@@ -34,7 +38,7 @@ body{
 .topnav a.active {
   background-color: black;
   color: white;
-  border-bottom: 5px solid rgb(151, 214, 214) ;
+  border-bottom: 5px solid #44acb9 ;
 }
 
 .topnav .icon {
@@ -53,7 +57,7 @@ li{
 }
 
 li:hover{
-color:rgb(151, 214, 214); ;
+color:rgb(#44acb9); ;
 
 }
 
@@ -62,12 +66,16 @@ li:visited{
 }
 
 a {
-    color: black;
+
     text-decoration: none;
 }
 a:hover{
-    color: rgb(151, 214, 214);
-    border-bottom: 1px solid rgb(151, 214, 214);
+    color: #44acb9;
+    border-bottom: 1px solid #44acb9;
+}
+
+a:visited{
+  text-decoration: none;
 }
 
 i{
@@ -81,12 +89,12 @@ i:hover{
 
 
 .links{
-    color: rgb(151, 214, 214);
+    color: #44acb9;
 }
 
 .links:hover{
-    color: rgb(151, 214, 214);
-    border-bottom: 1px solid rgb(151, 214, 214);
+    color: #44acb9;
+    border-bottom: 1px solid #44acb9;
 }
 
 .header{
@@ -173,7 +181,8 @@ img{
   .blog-btn {
     border-radius: 4px;
     border: 1px solid black;
-    color: black;
+    color: #44acb9;
+    background-color: black;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -185,6 +194,10 @@ img{
     
   }
   
+  .blog-btn:visited {
+text-decoration: none;
+    
+  }
   .blog-btn span {
     cursor: pointer;
     display: inline-block;
@@ -200,18 +213,19 @@ img{
     top: 0;
     right: -20px;
     transition: 0.5s;
-    color: #76c9d4;
+    color: #44acb9;
   }
   
   .blog-btn:hover span {
     padding-right:20px;
-    color:#76c9d4;
+    color: #44acb9;
+
   }
   
   .blog-btn:hover span:after {
     opacity: 1;
     right: 0;
-    color:#76c9d4;
+    color:#44acb9;
   }
 
 
@@ -472,7 +486,7 @@ article {
     transparent 50px,
     transparent 0
   );
-  margin: auto auto 150px auto;
+  margin: auto auto 200px auto;
 }
 
 
@@ -518,7 +532,7 @@ article {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color:#76c9d4;
+  color:#44acb9;
   font-weight: bold;
   font-size: 20px;
   transition: all 0.6s ease;
@@ -529,7 +543,7 @@ article {
 .slide-container .prev:hover,
 .slide-container .next:hover {
   background-color: black;
-  color: #76c9d4;
+  color: #44acb9;
 }
 
 .slide-container .prev {
@@ -558,5 +572,5 @@ article {
 }
 
 .dots-container .dot.active {
-  border: 2px solid #76c9d4;
+  border: 2px solid #44acb9;
 }
