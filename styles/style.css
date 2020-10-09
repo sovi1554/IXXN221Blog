@@ -66,12 +66,11 @@ li:visited{
 }
 
 a {
-
-    text-decoration: none;
+  color: #44acb9;
+  text-decoration: none;
 }
 a:hover{
     color: #44acb9;
-    border-bottom: 1px solid #44acb9;
 }
 
 a:visited{
@@ -136,6 +135,14 @@ hr{
     margin-right: auto;
     margin-bottom: 2%;
 }
+
+.hr-blog{
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  
+}
 /*~~~~~~~~~~~ Containers ~~~~~~~~~~~~~*/
 .content-container{
     display: grid;
@@ -181,7 +188,7 @@ img{
   .blog-btn {
     border-radius: 4px;
     border: 1px solid black;
-    color: #44acb9;
+    color: white;
     background-color: black;
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -195,8 +202,7 @@ img{
   }
   
   .blog-btn:visited {
-text-decoration: none;
-    
+    text-decoration: none; 
   }
   .blog-btn span {
     cursor: pointer;
@@ -227,8 +233,34 @@ text-decoration: none;
     right: 0;
     color:#44acb9;
   }
-
-
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color:Black;
+    color: white;
+    cursor: pointer;
+    padding: 20px 10px 10px 20px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #44acb9;
+  }
+  .arrow {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+  }
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
 /*~~~~~~~~~~~ Right Container ~~~~~~~~~~~~~*/
 .right-content img{
     height: 200px;
@@ -352,7 +384,7 @@ footer{
 
     .content-container{
         grid-template-areas: 'left-content''right-content';
-        width: 70%;
+        width: 65%;
         margin: auto;
     }
     hr{
@@ -364,18 +396,21 @@ footer{
     .right-content{
         display: grid;
         grid-template-areas: 'avatar-content' 'topics' 'popular-posts';
-        grid-gap: 40px;
+        grid-gap: 20px;
     }
 
     .topics{
         margin-top: 30px;
     }
+    .right-line{
+      display: none;
+  }
 }
 /*~~~~~~~~~~~Mobile Responsiveness~~~~~~~~~~~~~*/
 @media(max-width:700px){
     .content-container{
         grid-template-areas: 'left-content' 'right-content';
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
 
@@ -392,7 +427,7 @@ footer{
       display: block;
       margin: 15px;
       align-content: center;
-      text-align: center;
+      text-align: left;
   }
 
   .blog-btn{
@@ -446,6 +481,20 @@ footer{
       display: block;
       text-align: left;
     }
+    #myBtn {
+      align-self: center;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color:Black;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
 }
 
 
@@ -486,7 +535,7 @@ article {
     transparent 50px,
     transparent 0
   );
-  margin: auto auto 200px auto;
+  margin: auto auto 24px auto;
 }
 
 
